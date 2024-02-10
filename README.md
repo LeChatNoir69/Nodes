@@ -18,8 +18,9 @@ su - mango
 ```
 
 ## Step 2 - install and launch scripts
-```bash
+```sh
 sudo apt install -y git
 git clone https://github.com/LeChatNoir69/init-Linux-Nodes
 
 ...To complete
+```
