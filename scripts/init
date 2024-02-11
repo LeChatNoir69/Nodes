@@ -1,0 +1,47 @@
+#!/bin/bash
+
+################## First, check OS ################
+OS_LIST="ubuntu-"
+DEFAULT_IFS="$IFS"
+IFS='-'
+for os in $OS_LIST
+do 
+  # check OS
+  if [[ $(uname -a|grep -i $os) ]]
+  then
+    CURRENT_OS=$os
+    break
+  fi 
+done
+IFS=${DEFAULT_IFS}
+
+if [[ -z $CURRENT_OS ]]
+then
+  echo "This script is only for $OS_LIST and it seems your host is not compatible. Exiting..."
+  exit 1
+fi
+
+############## Now install dependencies ###########
+
+./prerequisite_${CURRENT_OS}
+
+############## Now install mangonote ###########
+PROJECT="mangonote"
+
+git clone https://github.com/mangonote-project/mangonote.git
+cd $PROJECT 
+git submodule init && git submodule update
+make
+echo "PATH=\"\$PATH:\$HOME/$PROJECT/build/Linux/master/release/bin\"" >> $HOME/.profile
+source $HOME/.profile
+
+# Post install
+echo ""
+echo "If all looks good, Try to run the node"
+echo ""
+echo "  mangonoted"
+echo ""
+echo "or to run the wallet :"
+echo ""
+echo "  zelrkjzerbg"
+echo ""
