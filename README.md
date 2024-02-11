@@ -2,7 +2,8 @@
 Install Linux Node - mango tests
 
 ## Purpose of this repo
-Help newbie Linux people to install crypto project nodes easier
+Help newbie Linux people to install crypto project nodes easier.
+Currently, just a try for mangonote on ubuntu OS
 
 ## Step 1 - Secure the node install with a fresh user
 
