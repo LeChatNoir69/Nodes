@@ -21,6 +21,7 @@ su - mango
 ```sh
 sudo apt install -y git
 git clone https://github.com/LeChatNoir69/init-Linux-Nodes
-
-...To complete
+cd init-Linux-Nodes
+./init
 ```
+If everything went well, you should start your mango node and wallet.
