@@ -25,4 +25,4 @@ git clone https://github.com/LeChatNoir69/init-Linux-Nodes
 cd init-Linux-Nodes
 ./init
 ```
-If everything went well, you should start your mango node and wallet.
+If everything went well, you should be able to start your mango node and wallet.
